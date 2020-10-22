@@ -8,12 +8,12 @@ function App() {
     <div>
       <Style>
         <div className="background-wrapper">
-          <div className="sky"></div>
+          <div className="sky" />
           <div className="cloud-wrapper">
             <img className="cloud" src={Cloud} alt="cloud" />
             <img className="cloud" src={Cloud} alt="cloud" />
           </div>
-          <div className="grass"></div>
+          <div className="grass" />
           <main>
             <div className="animal-wrapper">
               <Animal animal="Dog" />

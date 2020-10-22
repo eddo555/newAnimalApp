@@ -1,17 +1,5 @@
 import React, { useContext } from "react";
-
 import { AnimalContext } from "./animalContext";
-
-import Dog from "./assets/dog.png";
-import Cat from "./assets/cat.png";
-import Cow from "./assets/cow.png";
-import Pig from "./assets/pig.png";
-
-const clickedStyle = {
-  border: "solid black",
-  //animation
-  //separate state from isactive to each animal
-};
 
 const Animal = ({ animal }) => {
   const {
@@ -20,12 +8,15 @@ const Animal = ({ animal }) => {
     isCatClicked,
     isCowClicked,
     isPigClicked,
+    Dog,
+    Cat,
+    Cow,
+    Pig,
   } = useContext(AnimalContext);
   if (animal === "Dog") {
     return isDogClicked ? (
       <img
-        className="animal"
-        style={clickedStyle}
+        className="animal-clicked"
         src={Dog}
         alt="dog"
         onClick={() => toggleAnimal("dog")}
@@ -42,8 +33,7 @@ const Animal = ({ animal }) => {
   if (animal === "Cat") {
     return isCatClicked ? (
       <img
-        className="animal"
-        style={clickedStyle}
+        className="animal-clicked"
         src={Cat}
         alt="cat"
         onClick={() => toggleAnimal("cat")}
@@ -60,8 +50,7 @@ const Animal = ({ animal }) => {
   if (animal === "Cow") {
     return isCowClicked ? (
       <img
-        className="animal"
-        style={clickedStyle}
+        className="animal-clicked"
         src={Cow}
         alt="cow"
         onClick={() => toggleAnimal("cow")}
@@ -78,8 +67,7 @@ const Animal = ({ animal }) => {
   if (animal === "Pig") {
     return isPigClicked ? (
       <img
-        className="animal"
-        style={clickedStyle}
+        className="animal-clicked"
         src={Pig}
         alt="pig"
         onClick={() => toggleAnimal("pig")}
